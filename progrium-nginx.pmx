@@ -2,8 +2,7 @@ name: progrium-nginx
 description: progrium-nginx
 keywords: progrium, nginx
 recommended: true
-documentation: |
-Nginx Appliance
+documentation: Nginx Appliance
 
 authors:
 - 'yieme@cormea.com'
