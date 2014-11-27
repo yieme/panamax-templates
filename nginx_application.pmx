@@ -1,0 +1,33 @@
+---
+name: Nginx Application
+description: A generic Nginx Docker container that you can configure at runtime via
+  HTTP API. It was built using [Configurator](https://github.com/progrium/configurator)
+keywords: nginx,configurator
+type: Apache
+documentation: |
+  # Nginx Appliance
+
+  A generic Nginx Docker container that you can configure at runtime via HTTP API. It was built using [Configurator](https://github.com/progrium/configurator)
+
+  ```
+  $ docker pull progrium/nginx
+  $ docker run -d -p 8000:80 progrium/nginx
+  $ curl localhost:8000
+  ```
+images:
+- name: MySQL
+  source: centurylink/mysql:5.5
+  category: Database
+  type: Default
+  expose:
+  - '3306'
+  ports:
+  - host_port: '3306'
+    container_port: '3306'
+  environment:
+  - variable: MYSQL_ROOT_PASSWORD
+    value: MediaWiki.123
+- name: progrium_nginx
+  source: progrium/nginx:latest
+  category: Web Server - Ngingx
+  type: Default
