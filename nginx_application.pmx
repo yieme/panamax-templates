@@ -32,6 +32,3 @@ images:
     container_port: '80'
   - host_port: '9000'
     container_port: '9000'
-  environment:
-  - variable: SEMVER
-    value: 0.1.0
