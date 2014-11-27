@@ -8,7 +8,17 @@ authors:
 - 'yieme@cormea.com'
 type: nginx
 images:
+  - category: Web Tier
   name: NginxApp
   source: progrium/nginx:latest
   description: A Configurator Xginx App running in-container
+  type: Default
+  expose: ['80']
+  ports:
+  - container_port: '80'
   links: []
+  environment:
+  - variable: PORT
+  value: '80'
+  required: true
+  volumes: []
