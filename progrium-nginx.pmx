@@ -2,6 +2,7 @@ name: progrium-nginx
 description: progrium-nginx
 keywords: progrium, nginx
 recommended: true
+documentation: Nginx Appliance
 authors:
 - 'yieme@cormea.com'
 type: nginx
@@ -15,5 +16,3 @@ images:
   container_port: 80
   category: Web Proxy
   type: nginx
-
-documentation: Nginx Appliance
