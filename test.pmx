@@ -1,0 +1,42 @@
+---
+name: test
+description: this is a test description
+keywords: ''
+type: NodeJS
+documentation: |
+  # Nginx Appliance
+
+  A generic Nginx Docker container that you can configure at runtime via HTTP API. It was built using [Configurator](https://github.com/progrium/configurator)
+
+  ```
+  $ docker pull progrium/nginx
+  $ docker run -d -p 8000:80 progrium/nginx
+  $ curl localhost:8000
+  ```
+images:
+- name: Mediawiki
+  source: nickstenning/mediawiki:latest
+  category: Web Server - MediaWiki
+  type: Default
+  ports:
+  - host_port: '8088'
+    container_port: '80'
+    proto: TCP
+  links:
+  - service: MySQL
+    alias: mysql
+  volumes:
+  - host_path: "/var/mediawiki"
+    container_path: "/data"
+- name: MySQL
+  source: centurylink/mysql:5.5
+  category: Database
+  type: Default
+  expose:
+  - '3306'
+  ports:
+  - host_port: '3306'
+    container_port: '3306'
+  environment:
+  - variable: MYSQL_ROOT_PASSWORD
+    value: MediaWiki.123
