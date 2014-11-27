@@ -1,0 +1,20 @@
+
+name: progrium-nginx
+description: progrium-nginx
+keywords: progrium, nginx
+recommended: true
+authors:
+- 'yieme@cormea.com'
+type: nginx
+images:
+  - name: NginxApp
+  source: progrium/nginx:latest
+  description: A Configurator Xginx App running in-container
+  links: []
+  ports:
+  - host_port: 8000
+  container_port: 80
+  category: Web Proxy
+  type: nginx
+
+documentation: Nginx Appliance
