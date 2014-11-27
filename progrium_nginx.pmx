@@ -20,7 +20,7 @@ documentation: |
 
 
 images:
-- name: progrium_nginx
+- name: Nginx App
   source: progrium/nginx:latest
   category: Web Server - Ngingx
   type: Apache
