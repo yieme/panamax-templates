@@ -1,7 +1,7 @@
 ---
 name: test
 description: this is a test description
-keywords: ''
+keywords: 'xginx,configurator'
 type: NodeJS
 documentation: |
   # Nginx Appliance
