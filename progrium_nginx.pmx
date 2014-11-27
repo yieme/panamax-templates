@@ -23,7 +23,6 @@ images:
 - name: Nginx App
   source: progrium/nginx:latest
   category: Web Server - Nginx
-  type: Default
   expose:
   - '8000'
   - '9000'
