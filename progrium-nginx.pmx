@@ -12,8 +12,5 @@ images:
   source: progrium/nginx:latest
   description: A Configurator Xginx App running in-container
   links: []
-  ports:
-  - host_port: '8000'
-  - container_port: '80'
   category: Web Proxy
   type: nginx
