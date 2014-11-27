@@ -11,9 +11,9 @@ documentation: |
 
   Same as: ```docker run -d -p 8000:80 -p 9000:9000 progrium/nginx```
 
-  View at: ```panamax.local:8000```
+  View at: [panamax.local:8000](http://panamax.local:8000)
 
-  Configure: ```panamax.local:9000```
+  Configurator: [panamax.local:9000/v1/config/](http://panamax.local:9000/v1/config/)
 
   More at: [progrium/nginx-appliance](https://github.com/progrium/nginx-appliance)
 
