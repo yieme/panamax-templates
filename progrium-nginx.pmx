@@ -8,7 +8,7 @@ authors:
 - 'yieme@cormea.com'
 type: nginx
 images:
-  - name: NginxApp
+  name: NginxApp
   source: progrium/nginx:latest
   description: A Configurator Xginx App running in-container
   links: []
