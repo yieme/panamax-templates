@@ -12,5 +12,3 @@ images:
   source: progrium/nginx:latest
   description: A Configurator Xginx App running in-container
   links: []
-  category: Web Proxy
-  type: nginx
