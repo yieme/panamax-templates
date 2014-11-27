@@ -1,0 +1,32 @@
+---
+name: Consul
+description: Service discover and configuration made easy. Distributed, highly available, and datacenter-aware. Based on BusyBox.
+keywords: consul,discover,configuration
+type: Default
+documentation: |
+  # Consul Agent
+
+  Same as: ```docker run -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul -server -bootstrap```
+
+  View at: [panamax.local:8400](http://panamax.local:8400)
+
+  More at: [progrium/docker-consul](https://github.com/progrium/docker-consul)
+
+
+
+images:
+- name: Consul Agent
+  source: progrium/consul:latest
+  category: Web Server - Ngingx
+  expose:
+  - '8400'
+  - '8500'
+  - '8600'
+  ports:
+  - host_port: '8400'
+    container_port: '8400'
+  - host_port: '8500'
+    container_port: '8500'
+  - host_port: '8600'
+    container_port: '53/udp'
+  command: '-h node1 progrium/consul -server -bootstrap'
