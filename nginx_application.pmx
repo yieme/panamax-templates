@@ -9,11 +9,13 @@ documentation: |
 
   A generic Nginx Docker container that you can configure at runtime via HTTP API. It was built using [Configurator](https://github.com/progrium/configurator)
 
-  > docker pull progrium/nginx
+  Same as: ```docker run -d -p 8000:80 -p 9000:9000 progrium/nginx```
 
-  > docker run -d -p 8000:80 progrium/nginx
+  View at: ```panamax.local:8000```
 
-  > curl localhost:8000
+  Configure: ```panamax.local:9000```
+
+  More at: [progrium/nginx-appliance](https://github.com/progrium/nginx-appliance)
 
 images:
 - name: progrium_nginx
@@ -22,9 +24,12 @@ images:
   type: Apache
   expose:
   - '8000'
+  - '9000'
   ports:
   - host_port: '8000'
     container_port: '80'
+  - host_port: '9000'
+    container_port: '9000'
   environment:
   - variable: SEMVER
     value: 0.1.0
