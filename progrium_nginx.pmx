@@ -22,7 +22,7 @@ documentation: |
 images:
 - name: Nginx App
   source: progrium/nginx:latest
-  category: Web Server - Ngingx
+  category: Web Server - Nginx
   type: Apache
   expose:
   - '8000'
