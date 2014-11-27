@@ -9,11 +9,12 @@ documentation: |
 
   A generic Nginx Docker container that you can configure at runtime via HTTP API. It was built using [Configurator](https://github.com/progrium/configurator)
 
-  ```
-  $ docker pull progrium/nginx
-  $ docker run -d -p 8000:80 progrium/nginx
-  $ curl localhost:8000
-  ```
+  > docker pull progrium/nginx
+
+  > docker run -d -p 8000:80 progrium/nginx
+
+  > curl localhost:8000
+
 images:
 - name: progrium_nginx
   source: progrium/nginx:latest
