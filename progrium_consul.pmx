@@ -17,7 +17,7 @@ documentation: |
 images:
 - name: Consul Agent
   source: progrium/consul:latest
-  category: Web Server - Ngingx
+  category: Discovery - Consul
   expose:
   - '8400'
   - '8500'
@@ -29,4 +29,4 @@ images:
     container_port: '8500'
   - host_port: '8600'
     container_port: '53/udp'
-  command: '-h node1 progrium/consul -server -bootstrap'
+  command: '-h node1 -server -bootstrap'
