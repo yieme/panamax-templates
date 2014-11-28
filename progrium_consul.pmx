@@ -27,4 +27,4 @@ images:
     container_port: '8500'
   - host_port: '8600'
     container_port: '53/udp'
-  command: "docker run -h node1 progrium/consul -server -bootstrap"
+  command: "docker run -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul -server -bootstrap"
