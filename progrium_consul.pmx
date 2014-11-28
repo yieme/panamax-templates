@@ -17,13 +17,16 @@ images:
   source: progrium/consul:latest
   category: Discovery - Consul
   expose:
-  - '8300'
-  - '8301'
-  - '8302'
   - '8400'
   - '8500'
   - '8600'
   ports:
+  - host_port: '8300'
+    container_port: '8300/tcp'
+  - host_port: '8301'
+    container_port: '8301'
+  - host_port: '8302'
+    container_port: '8302'
   - host_port: '8400'
     container_port: '8400'
   - host_port: '8500'
