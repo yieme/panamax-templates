@@ -8,7 +8,9 @@ documentation: |
 
   Same as: ```docker run -p 8400:8400 -p 8500:8500 -p 8600:53/udp -h node1 progrium/consul -server -bootstrap```
 
-  View at: [panamax.local:8400](http://panamax.local:8400)
+  View nodes: [panamax.local:8500/v1/catalog/nodes](http://panamax.local:8500/v1/catalog/nodes)
+
+  UI at: [panamax.local:8500/v1/ui](http://panamax.local:8500/ui/)
 
   More at: [progrium/docker-consul](https://github.com/progrium/docker-consul)
 
@@ -21,12 +23,6 @@ images:
   - '8500'
   - '8600'
   ports:
-  - host_port: '8300'
-    container_port: '8300/tcp'
-  - host_port: '8301'
-    container_port: '8301'
-  - host_port: '8302'
-    container_port: '8302'
   - host_port: '8400'
     container_port: '8400'
   - host_port: '8500'
